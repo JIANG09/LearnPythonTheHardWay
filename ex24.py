@@ -1,13 +1,16 @@
 print("Let's practice everything.")
-print('You\'d need to know \'bout escape with \\ that do \n newlines and \t tabs.')
+print('You\'d need to know \'bout escape with \\ that do:')
+print('\n newlines and \t tabs.')
+
 # \\ only \ will show
-# \t: tab or indentation; \n: go on next line;
+# \t: tab or indentation;
+# \n: go on next line;
 # \': ' will not be recognized as one of the pair ' '.
 
 # This poem has multiple lines
 poem = """      
-the lovely world   
-\n\twith logic so firmly planted
+\tthe lovely world   
+with logic so firmly planted
 cannot discern \n the needs of love
 nor comprehend passion from intuition
 and requires an explanation
@@ -19,7 +22,7 @@ print(poem)
 print("---------------------")
 
 five = 10 - 2 + 3 - 6
-print("This should be five: %d" % five)
+print(f"This should be five: {five}")
 
 
 # define a function named secret_formula; in this function, there are three mathematical operation
@@ -32,16 +35,21 @@ def secret_formula(started):
 
 
 start_point = 10000
-# call the function will a passed parameter start_point
-# and the function will return three values which will be stored three variables beans, jars and crates.
+# call secrete_formula with a passed parameter start_point
+# and the function will return three values which will be stored in three variables beans, jars and crates.
 beans, jars, crates = secret_formula(start_point)
-print("With a starting point of: %d" % start_point)
-print("We'd have %r beans, %d jars, and %d crates." % (beans, jars, crates))
+
+# remember that this is another way to format a string
+print("With a starting point of: {}".format(start_point))
+# it's just like with an f"" string
+print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
 
 # give another value to variable start_point
 start_point = start_point / 10
 
 print("We can also do that this way:")
+formula = secret_formula(start_point)
 # secret_formula (start_point) returns three values
 # put these three values in format string which is used in print-out.
-print("We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point))
+print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+

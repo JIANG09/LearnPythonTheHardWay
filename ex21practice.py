@@ -1,20 +1,20 @@
 def add(a, b):
-    print("ADDING %d + %f" % (a, b))
+    print(f"ADDING {a} + {b}")
     return a + b
 
 
 def subtract(a, b):
-    print("SUBTRACTING %d - %d" % (a, b))
+    print(f"SUBTRACTING {a} - {b}")
     return a - b
 
 
 def multiply(a, b):
-    print("MULTIPLYING %d * %d" % (a, b))
+    print(f"MULTIPLYING {a} * {b}")
     return a * b
 
 
 def divide(a, b):
-    print("DIVIDING %d / %d" % (a, b))
+    print(f"DIVIDING {a} / {b}")
     return a / b
 
 
@@ -25,8 +25,7 @@ height = subtract(7008, 4)
 weight = multiply(1000, 2)
 iq = divide(1001, 2)
 
-print("Age: %d, Height: %d, Weight: %d, IQ: %f" % (age, height, weight, iq))
-
+print(f"Age: {age}, Height: {height}, Weight: {weight}, IQ: {iq}")
 
 # A puzzle for the extra credit, type it in anyway.
 print("Here is a puzzle.")

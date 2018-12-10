@@ -1,29 +1,35 @@
-x = 'There are %d types of people.' % 10  
-# variable  x is bound to string ; the string has a format string
-binary = "binary"  # a variable which is bound to a string
-do_not = "don't" 
-y = "Those who know %s and those who %s." % (binary,do_not)  
-# it puts format string in a string by stating %s; 
-# the first and second place to put a string in another string 
+# create a variable named types_of_people and sets it to 10
+types_of_people = 10
+# create a variable named x and sets it to formatted string with a string put inside
+# 1st place where a string is put inside a string.
+x = f"There are {types_of_people} types of people"
 
+# create two variables and set them to different strings
+binary = "binary"
+do_not = "don't"
+
+# create a variable named y and sets it to a formatted string
+# 2nd place where a string is put inside a string.
+y = f"Those who know {binary} and those who {do_not}."
+
+# print out x and y
 print(x)
 print(y)
 
-print("I said: %r." % x)  
-# print out this format string
-# the third place to put a string in another string 
-print("I also said: '%s'." % y)
-# the fourth place to put a string in another string 
+# print the formatted string which has a variable
+# 3rd and 4th places where a string is put inside a string.
+print(f"I said: {x}")
+print(f"I also said: '{y}'")
 
-hilarious = False  # a boolean value is given to variable hilarious. 
-joke_evaluation = "Isn't that joke so funny?! %r"  # a format string; put a format variable to a string by using %r.  
+# create a variable named hilarious and set it to a boolean value False
+hilarious = False
+joke_evaluation = "Isn't that joke so funny?! {}"
 
-print(joke_evaluation % hilarious)  # print put a string with a format string which is a boolean value. 
+# the 5th place where a string is put inside a string
+print(joke_evaluation.format(hilarious))
 
-w = "This is the left side of ..."
-e = "a string with a right side"
+w = "This is the left side of..."
+e = "a string with a right side."
 
 print(w + e)
-# concatenation
-# %r is used for debugging, while other format strings are used to present output for users.
 

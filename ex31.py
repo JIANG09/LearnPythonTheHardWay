@@ -1,12 +1,13 @@
-print("You enter a dark room with three doors. Do you go through door #1 or door #2? or door #3?")
+print("""You enter a dark room with two doors. 
+Do you go through door #1 or door #2? or door #X?""")
 
 door = input("> ")
 
 if door == "1":
     print("There is a giant bear here eating a cheese cake. What do you do?")
+    print("What do you do?")
     print("1. Take the cake.")
     print("2. Scream at the bear.")
-    print("3. Change yourself into a bear.")
 
     bear = input("> ")
 
@@ -14,10 +15,9 @@ if door == "1":
         print("The bear eats your face off. Good job!")
     elif bear == "2":
         print("The bear eats your leg off. Good job!")
-    elif bear == "3":
-        print("You start a fight with the bear. Fighting!")
     else:
-        print("Well, doing %s is probably better. Bear runs away." % bear)
+        print(f"Well, doing {bear} is probably better.")
+        print("Bear runs away.")
 
 elif door == "2":
     print("You stare into the endless abyss at Cthulhu's retina.")
@@ -29,25 +29,26 @@ elif door == "2":
 
     if insanity == "1" or insanity == "2":
         print("Your body survives powered by a mind of jello. Good job!")
+        print("Good job!")
     else:
-        print("The insanity rots your eyes into a pool of muck. Good job!")
+        print("The insanity rots your eyes into a pool of muck.")
+        print("Good job!")
 
-elif door == "3":
-    print("""There is sword in this room.""")
-    print("1. Take the sword and go back to door #1.")
-    print("2. Take the sword and leave the room as soon as possible.")
-    print("3. Leave the sword and leave the room as soon as possible.")
+elif door == "X" or door == "x":
+    print("""There is a treasury map in this room.
+Choose the button and we will see!""")
+    print("Left.")
+    print("Right.")
 
-    sword = input("> ")
+    button = input("> ")
 
-    if sword == "1":
-        print("Congratulation! The room is a kingdom. You conquer the bear and becomes the ruler!")
-    elif sword == "2":
-        print("The sword is priceless. You become the richest man in the town.")
-    elif sword == "3":
-        print("Pity! There is a bear in this room and you have nothing to duel with him.")
+    if button == "Left" or button == "left":
+        print("The treasure map is in the box underground! Get it and find the treasure!")
+        print("You will become very very rich!")
+    elif button == "Right" or button == "right":
+        print("Such a bad luck! You find nothing!")
     else:
-        print("Leave this room!")
+        print("Invalid input!")
 
 else:
     print("You stumble around and fall on a knife and die. Good job!")

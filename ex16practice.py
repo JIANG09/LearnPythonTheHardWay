@@ -2,11 +2,13 @@ from sys import argv
 
 script, filename = argv
 
-print("We're going to read %r." % filename)
+print(f"We're going to open {filename} file.")
 print("If you don't want that, hit CTRL^C.")
 print("If you do want that, hit RETURN.")
 
-input('The file is coming ... ')
-target = open(filename, 'r')
+input("So your choice is: ")
+print("The file is coming...")
+target = open(filename)
+print(target.read())
 
 target.close()

@@ -1,20 +1,19 @@
 name = "Zed A. Shaw"
 age = 35  # not a lie
-height = 74  # inches
-weight = 180  # lbs
+height = 74 / 10000  # centimeters
+weight = 180.0 / 25  # kilograms
 eyes = 'Blue'
 teeth = 'White'
 hair = "Brown"
 
-print('Let\'s talk about %r.' % name)
-print("He's %r inches tall." % height)
-print("He's %r pounds heavy." % weight)
+print(f"Let's talk about {name}.")
+print(f"He's {height} inches tall.")
+print(f"He's {weight} pounds heavy. ")
 print("Actually that's not too heavy.")
-print("He's got %r eyes and %r hair." % (eyes, hair))
-print("His teeth are usually %r depending on coffee." % teeth)
+print(f"He's got {eyes} eyes and {hair} hair.")
+print(f"His teech are usually {teeth} depending on the coffee.")
 
 # this line is tricky, try to get it exactly right.
-print("If I add %r, %r, and %r I get %r." % (age, height, weight, age + height + weight))
+total = age + height + weight
+print(f"If I add {age}, {height}, and {weight} I get {total}.")
 
-# %s: 格式化字符  %d:格式化整数  %f:格式化浮点数字，可指定小数点后的精度  
-# %e:用科学计数法格式化浮点数 %g:%f和%e的简写 %r: 不管什么都能打印出来

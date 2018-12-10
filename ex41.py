@@ -1,5 +1,5 @@
 import random
-from urllib import urlopen
+from urllib.request import urlopen
 import sys
 
 WORD_URL = "http://learncodethehardway.org/words.txt"
@@ -22,25 +22,28 @@ PHRASES = {
 }
 
 # do they want to drill phrases first
-PHRASES_FIRST = False
 if len(sys.argv) == 2 and sys.argv[1] == 'english':
-    PHRASES_FIRST = True
+    PHRASE_FIRST = True
+else:
+    PHRASE_FIRST = False
 
 # load up the words from teh website
 for word in urlopen(WORD_URL).readlines():
-    WORDS.append(word.strip())
+    WORDS.append(str(word.strip(), encoding="utf-8"))
 
 
 def convert(snippet, phrase):
     class_names = [w.capitalize() for w in
                    random.sample(WORDS, snippet.count("%%%"))]
     other_names = random.sample(WORDS, snippet.count("***"))
+
     results = []
     param_names = []
 
     for i in range(0, snippet.count("@@@")):
-        para_count = random.randint(1,3)
-        param_names.append(', '.join(random.sample(WORDS, para_count)))
+        param_count = random.randint(1, 3)
+        param_names.append(', '.join
+                           (random.sample(WORDS, param_count)))
 
     for sentence in snippet, phrase:
         result = sentence[:]
@@ -65,18 +68,18 @@ def convert(snippet, phrase):
 # keep going until they hit CTRL-D
 try:
     while True:
-        snippets = PHRASES.keys()
+        snippets = list(PHRASES.keys())
         random.shuffle(snippets)
 
         for snippet in snippets:
             phrase = PHRASES[snippet]
             question, answer = convert(snippet, phrase)
-            if PHRASES_FIRST:
+            if PHRASE_FIRST:
                 question, answer = answer, question
 
             print(question)
 
             input("> ")
-            print("ANSWER: %s\n\n" % answer)
+            print(f"ANSWER: {answer}\n\n")
 except EOFError:
     print("\nBye")

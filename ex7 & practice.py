@@ -1,13 +1,12 @@
-print('Mary has a little lamb.')  # print out a sentence.
+print('Mary has a little lamb.')  # print out a string
 
-# print out a sentence with a format string %s.
-print('Its fleece was white as %s.' % 'snow')
-
+# print out a formatted string with a string inside
+print("Its fleece was white as {}.".format('snow'))
+# print out a string
 print("And everything that Mary went.")
 
 # print out '.' for ten times.
 print("." * 10)
-
 # from end1 to end12, those are variables; each is bound to a string
 end1 = "C"
 end2 = 'h'
@@ -22,7 +21,8 @@ end10 = 'g'
 end11 = 'e'
 end12 = 'r'
 
-# watch that comma ar the end. try removing it to see what happens.
+# watch end = '' at the end. try removing it to see what happen
+# end=' ' means there is a space after the printed string and no next line
 print(end1 + end2 + end3 + end4 + end5 + end6, end=' ')
 
 # concatenation from end7 to end12, the strings stored in the variables will be concatenated.

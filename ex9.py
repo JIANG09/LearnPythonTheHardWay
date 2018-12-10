@@ -1,11 +1,14 @@
 # Here's some new strange stuff, remember type it exactly.
 
+# two variables and set them to strings;
 days = "Mon Tue Wed Thu Fri Sat Sun"
+# \n means to start a new line
 months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
 
 print("Here are the days: ", days)
 print("Here are the months: ", months)
 
+# print out multi-lines
 print("""
 There's something going on here.
 With the three double-quotes.

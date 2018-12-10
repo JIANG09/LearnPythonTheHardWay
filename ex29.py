@@ -2,6 +2,7 @@ people = 20
 cats = 30
 dogs = 15
 
+
 if people < cats:
     print("Too many cats! The world is doomed!")
 
@@ -13,6 +14,7 @@ if people < dogs:
 
 if people > dogs:
     print("The world is dry!")
+
 
 dogs += 5
 
@@ -28,8 +30,8 @@ if people == dogs:
 if True or False:
     print("python")
 
-if True and False:
-    print(9*7)
+if True and 1:
+    print(9 ** 17)
 
 if 'testing' == 'test':
     print("OK")

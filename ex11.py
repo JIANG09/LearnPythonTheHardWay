@@ -4,19 +4,21 @@ print("How tall are you?", end=' ')
 height = input()
 print("How much do you weigh?", end=' ')
 weight = input()
-print("So, you're %r old, %r tall and %r heavy." %
-      (age, height, weight))
 
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+
+# practice
 print("What are you doing right now?", end=' ')
 doing = input()
 print("Why are you doing it?", end=' ')
 why = input()
-print("How many days have you been doing it? ", end= ' ')
-long = int(input())
+print("How many days have you been doing it? ", end=' ')
+long = input()
 
-print("""So, \n\tYou are %s.
-             \n\t\t%s
-             \n\t\t\tYou have been doing it for %d days. 
-             \n\t\t\t\tYour wish will come true!Just keep doing!"""
-      % (doing, why, long))
+print(f"""So, you are {doing}.
+Why are you doing it? {why}
+You have been doing it for {long} days. 
+Your wish will come true!Just keep doing!
+""")
 

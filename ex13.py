@@ -8,3 +8,4 @@ print("Your second variable is:", second)
 print("Your third variable is:", third)
 
 print(input('Have you understood argument variable?'))
+

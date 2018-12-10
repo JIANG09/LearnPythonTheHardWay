@@ -1,40 +1,22 @@
-
-
-def while_function(j, o):
+def while_function(x, j):
     i = 0
     numbers = []
 
     while i < j:
-        print("At the top i is %d" % i)
+        print(f"At the top i is {i}")
         numbers.append(i)
 
-        i = i + o
+        i = i + x
         print("Numbers now: ", numbers)
-        print("At the bottom i is %d" % i)
+        print(f"At the bottom i is {i}")
 
-    print("The numbers:")
-
-    for num in numbers:
-        print(num)
+    return numbers
 
 
-while_function(100, 50)
+numbers_1 = while_function(7, 10)
 
+print("The numbers: ")
 
-def for_function(j):
-    numbers = []
+for num in numbers_1:
+    print(num)
 
-    for i in range(0, j):
-        print("At the top i is %d" % i)
-        numbers.append(i)
-
-        print("Numbers now: ", numbers)
-        print("At the bottom i is %d" % i)
-
-    print("The numbers:")
-
-    for num in numbers:
-        print(num)
-
-
-for_function(8)
